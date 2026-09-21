@@ -47,7 +47,7 @@ Show how sales change over time.
 - [x] Chart renders within 2 seconds of data load
 
 Commit: 46309a2
-Notes: Implementation matched the plan exactly — TDD RED then GREEN verified (5 tests passing), no rework needed. Verified the trend against the real dataset directly: 12 months, 2024-01 through 2024-12, generally trending upward and spiking to $15,186.34 in December, matching the plan's expected shape. Timed `load_sales_data` + `monthly_sales_trend` on the real CSV at 22.8ms, well within the 2-second budget. Tooltips come for free from Plotly's default hover behavior on `px.line(..., markers=True)` — no extra code needed.
+Notes: Clean — implementation matched the plan exactly (TDD RED then GREEN, 5 tests passing), nothing Rolland had to correct.
 
 ### TASK-3: KPI cards implementation
 Display the headline Total Sales and Total Orders metrics.
