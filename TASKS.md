@@ -12,14 +12,6 @@ A milestone can only move to Done when:
 
 ## To Do
 
-### TASK-2: Data loading and basic structure
-Load and validate the sales data so it's ready for analysis.
-- [ ] `sales-data.csv` loads into a Pandas DataFrame without errors
-- [ ] Date, numeric, and categorical columns are parsed with correct types
-- [ ] A basic data preview/summary is displayed in the app for sanity checking
-
-Commit:
-
 ### TASK-3: KPI cards implementation
 Display the headline Total Sales and Total Orders metrics.
 - [ ] Total Sales (sum of `total_amount`) and Total Orders (transaction count) are calculated correctly
@@ -63,6 +55,15 @@ Commit:
 ## In Progress
 
 ## Done
+
+### TASK-2: Data loading and basic structure
+Load and validate the sales data so it's ready for analysis.
+- [x] `sales-data.csv` loads into a Pandas DataFrame without errors
+- [x] Date, numeric, and categorical columns are parsed with correct types
+- [ ] ~~A basic data preview/summary is displayed in the app for sanity checking~~
+  Note: Rolland Lopez approved moving TASK-2 to Done without this item. The implementation plan's Task 2 never adds a preview to `app.py`, and Task 3 overwrites `app.py`'s contents wholesale (adding the KPI cards) before a preview would ever be seen, so it was dropped as redundant.
+
+Commit: f094d5b
 
 ### TASK-1: Environment setup and project initialization
 Set up the project skeleton and dependencies needed to build the dashboard.
