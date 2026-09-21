@@ -12,17 +12,20 @@ A milestone can only move to Done when:
 
 ## To Do
 
-### TASK-7: Deployment to Streamlit Community Cloud
-Publish the dashboard so stakeholders can access it via a public URL.
-- [ ] App is deployed to Streamlit Community Cloud
-- [ ] Deployed app is reachable via a shareable public URL and matches local behavior
-- [ ] Public URL is recorded (e.g., in the README) for stakeholder access
-
-Commit:
-
 ## In Progress
 
 ## Done
+
+### TASK-7: Deployment to Streamlit Community Cloud
+Publish the dashboard so stakeholders can access it via a public URL.
+- [x] App is deployed to Streamlit Community Cloud
+- [x] Deployed app is reachable via a shareable public URL and matches local behavior
+- [x] Public URL is recorded (e.g., in the README) for stakeholder access
+
+Live URL: https://sales-dashboard-rollandlopez.streamlit.app/
+
+Commit: N/A — deployed manually by Rolland Lopez, no separate code commit
+Notes: Clean — deployed manually by Rolland Lopez from `main` per the plan's TASK-7 hand-off (not implemented by the agent). Rolland confirmed the deployed app is live and matches local behavior; URL recorded here and in README.md.
 
 ### TASK-6: Testing and refinement
 Verify the dashboard is correct, performant, and presentable.
