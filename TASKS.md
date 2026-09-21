@@ -61,6 +61,7 @@ Load and validate the sales data so it's ready for analysis.
 - [x] `sales-data.csv` loads into a Pandas DataFrame without errors
 - [x] Date, numeric, and categorical columns are parsed with correct types
 - [ ] ~~A basic data preview/summary is displayed in the app for sanity checking~~
+
   Note: Rolland Lopez approved moving TASK-2 to Done without this item. The implementation plan's Task 2 never adds a preview to `app.py`, and Task 3 overwrites `app.py`'s contents wholesale (adding the KPI cards) before a preview would ever be seen, so it was dropped as redundant.
 
 Commit: f094d5b
