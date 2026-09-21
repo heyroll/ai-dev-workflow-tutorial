@@ -30,6 +30,7 @@ fig_trend = px.line(
     labels={"month": "Month", "total_amount": "Sales ($)"},
     title="Sales Trend Over Time",
 )
+fig_trend.update_yaxes(rangemode="tozero")
 st.plotly_chart(fig_trend, use_container_width=True)
 
 col3, col4 = st.columns(2)
