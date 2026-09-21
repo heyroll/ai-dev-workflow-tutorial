@@ -346,6 +346,10 @@ The dashboard will be considered complete when:
 | Performance with large data | Medium | Low | Use efficient Pandas operations |
 | Browser compatibility | Medium | Low | Test on multiple browsers |
 | Scope creep | High | Medium | Strict adherence to Phase 1 scope |
+| Blank transaction dates | Low | Low | A row with a missing/blank `date` parses to `NaT` and produces a bogus "NaN" point on the Sales Trend chart instead of being excluded or flagged. Not observed in the current sample CSV. Add a date-validity check to `load_sales_data` if the source data ever gets less clean. |
+| Missing category/region values | Medium | Low | pandas `groupby`'s default `dropna=True` silently excludes rows with a missing category or region from the breakdown charts, while the KPI cards still count them — totals stop reconciling with no error shown. Consider `dropna=False` with an explicit "Unknown" bucket, or validate category/region are non-null at load time. |
+| NaN transaction amounts | Medium | Low | `total_sales()` uses `Series.sum()` (skips NaN by default) while `total_orders()` counts every row via `len()`, so a NaN `total_amount` would make the two headline KPIs silently inconsistent with each other. Validate `total_amount` is non-null at load time, or make both functions agree on how to treat NaN rows. |
+| Malformed CSV crashes the app | Medium | Low | The load error handler only catches `(FileNotFoundError, ValueError)`; a bad encoding, truncated file, or wrong delimiter can raise pandas' `ParserError`, `UnicodeDecodeError`, or `EmptyDataError`, none of which are caught — the app would crash with a raw traceback instead of the intended friendly `st.error(...)` message. Broaden the `except` clause to cover these. |
 
 ---
 
