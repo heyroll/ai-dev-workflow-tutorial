@@ -12,14 +12,6 @@ A milestone can only move to Done when:
 
 ## To Do
 
-### TASK-4: Sales trend chart
-Show how sales change over time.
-- [ ] Line chart plots sales over time (daily or monthly granularity)
-- [ ] Chart includes interactive tooltips showing exact values
-- [ ] Chart renders within 2 seconds of data load
-
-Commit:
-
 ### TASK-5: Category and region breakdowns
 Show sales broken down by product category and by region.
 - [ ] Bar chart shows sales by category, sorted highest to lowest, with all 5 categories present
@@ -45,6 +37,14 @@ Publish the dashboard so stakeholders can access it via a public URL.
 Commit:
 
 ## In Progress
+
+### TASK-4: Sales trend chart
+Show how sales change over time.
+- [ ] Line chart plots sales over time (daily or monthly granularity)
+- [ ] Chart includes interactive tooltips showing exact values
+- [ ] Chart renders within 2 seconds of data load
+
+Commit:
 
 ## Done
 
