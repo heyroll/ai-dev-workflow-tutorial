@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 
-from sales_data import load_sales_data, total_sales, total_orders
+from sales_data import load_sales_data, total_sales, total_orders, monthly_sales_trend
 
 CSV_CONTENT = """date,order_id,product,category,region,quantity,unit_price,total_amount
 2024-01-15,ORD-1,Widget,Electronics,North,1,100.0,100.0
@@ -53,3 +53,10 @@ def test_total_sales(sample_df):
 
 def test_total_orders(sample_df):
     assert total_orders(sample_df) == 5
+
+
+def test_monthly_sales_trend(sample_df):
+    result = monthly_sales_trend(sample_df)
+
+    assert list(result["month"]) == ["2024-01", "2024-02", "2024-03"]
+    assert list(result["total_amount"]) == [200.0, 290.0, 50.0]
