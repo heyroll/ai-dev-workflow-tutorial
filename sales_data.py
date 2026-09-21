@@ -13,3 +13,11 @@ def load_sales_data(path: str) -> pd.DataFrame:
         raise ValueError(f"sales data is missing required columns: {missing}")
     df["date"] = pd.to_datetime(df["date"])
     return df
+
+
+def total_sales(df: pd.DataFrame) -> float:
+    return df["total_amount"].sum()
+
+
+def total_orders(df: pd.DataFrame) -> int:
+    return len(df)
