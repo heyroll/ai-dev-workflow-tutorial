@@ -12,14 +12,6 @@ A milestone can only move to Done when:
 
 ## To Do
 
-### TASK-3: KPI cards implementation
-Display the headline Total Sales and Total Orders metrics.
-- [ ] Total Sales (sum of `total_amount`) and Total Orders (transaction count) are calculated correctly
-- [ ] Currency and large numbers are formatted appropriately (e.g., `$116,500`)
-- [ ] KPIs are displayed prominently near the top of the dashboard
-
-Commit:
-
 ### TASK-4: Sales trend chart
 Show how sales change over time.
 - [ ] Line chart plots sales over time (daily or monthly granularity)
@@ -53,6 +45,14 @@ Publish the dashboard so stakeholders can access it via a public URL.
 Commit:
 
 ## In Progress
+
+### TASK-3: KPI cards implementation
+Display the headline Total Sales and Total Orders metrics.
+- [ ] Total Sales (sum of `total_amount`) and Total Orders (transaction count) are calculated correctly
+- [ ] Currency and large numbers are formatted appropriately (e.g., `$116,500`)
+- [ ] KPIs are displayed prominently near the top of the dashboard
+
+Commit:
 
 ## Done
 
