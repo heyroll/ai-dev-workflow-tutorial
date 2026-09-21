@@ -12,14 +12,6 @@ A milestone can only move to Done when:
 
 ## To Do
 
-### TASK-1: Environment setup and project initialization
-Set up the project skeleton and dependencies needed to build the dashboard.
-- [ ] `app.py` and `requirements.txt` exist, with `streamlit`, `pandas`, and `plotly` listed as dependencies
-- [ ] Project structure includes a `data/` folder containing `sales-data.csv`
-- [ ] A minimal Streamlit app runs locally with `streamlit run app.py`
-
-Commit:
-
 ### TASK-2: Data loading and basic structure
 Load and validate the sales data so it's ready for analysis.
 - [ ] `sales-data.csv` loads into a Pandas DataFrame without errors
@@ -69,5 +61,13 @@ Publish the dashboard so stakeholders can access it via a public URL.
 Commit:
 
 ## In Progress
+
+### TASK-1: Environment setup and project initialization
+Set up the project skeleton and dependencies needed to build the dashboard.
+- [ ] `app.py` and `requirements.txt` exist, with `streamlit`, `pandas`, and `plotly` listed as dependencies
+- [ ] Project structure includes a `data/` folder containing `sales-data.csv`
+- [ ] A minimal Streamlit app runs locally with `streamlit run app.py`
+
+Commit:
 
 ## Done
