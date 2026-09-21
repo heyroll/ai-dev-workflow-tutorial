@@ -46,15 +46,16 @@ Commit:
 
 ## In Progress
 
+## Done
+
 ### TASK-3: KPI cards implementation
 Display the headline Total Sales and Total Orders metrics.
-- [ ] Total Sales (sum of `total_amount`) and Total Orders (transaction count) are calculated correctly
-- [ ] Currency and large numbers are formatted appropriately (e.g., `$116,500`)
-- [ ] KPIs are displayed prominently near the top of the dashboard
+- [x] Total Sales (sum of `total_amount`) and Total Orders (transaction count) are calculated correctly
+- [x] Currency and large numbers are formatted appropriately (e.g., `$116,500`)
+- [x] KPIs are displayed prominently near the top of the dashboard
 
-Commit:
-
-## Done
+Commit: 66716aa
+Notes: Implementation matched the plan exactly — TDD RED then GREEN verified (4 tests passing), no rework needed. Verified the KPI values directly against the real dataset (`load_sales_data` + `total_sales`/`total_orders` on `data/sales-data.csv`) rather than reading rendered HTML, since Streamlit renders client-side over a WebSocket and a plain page fetch won't show computed metric values; confirmed $116,500.21 (displays as $116,500) and 482 orders, matching the plan's expected output.
 
 ### TASK-2: Data loading and basic structure
 Load and validate the sales data so it's ready for analysis.
