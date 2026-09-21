@@ -24,7 +24,7 @@ Publish the dashboard so stakeholders can access it via a public URL.
 
 Live URL: https://sales-dashboard-rollandlopez.streamlit.app/
 
-Commit: N/A — deployed manually by Rolland Lopez, no separate code commit
+Commit: 1933e82
 Notes: Clean — deployed manually by Rolland Lopez from `main` per the plan's TASK-7 hand-off (not implemented by the agent). Rolland confirmed the deployed app is live and matches local behavior; URL recorded here and in README.md.
 
 ### TASK-6: Testing and refinement
@@ -33,7 +33,7 @@ Verify the dashboard is correct, performant, and presentable.
 - [x] Displayed values match expected results (~$116,500 total sales, 482 total orders, Electronics as top category)
 - [x] Layout and styling are polished enough for an executive presentation
 
-Commit: N/A — verification only, no code changes required
+Commit: 3082ac8
 Notes: Clean — verification only, everything already met the acceptance criteria, nothing to fix.
 
 ### TASK-5: Category and region breakdowns
