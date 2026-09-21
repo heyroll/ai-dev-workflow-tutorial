@@ -36,16 +36,20 @@ col3, col4 = st.columns(2)
 
 category = sales_by_category(df)
 fig_category = px.bar(
-    category, x="category", y="total_amount",
+    category, x="total_amount", y="category", orientation="h",
     labels={"category": "Category", "total_amount": "Sales ($)"},
     title="Sales by Category",
 )
+fig_category.update_layout(yaxis=dict(autorange="reversed"))
+fig_category.update_traces(hovertemplate="<b>%{y}</b><br>Sales: $%{x:,.2f}<extra></extra>")
 col3.plotly_chart(fig_category, use_container_width=True)
 
 region = sales_by_region(df)
 fig_region = px.bar(
-    region, x="region", y="total_amount",
+    region, x="total_amount", y="region", orientation="h",
     labels={"region": "Region", "total_amount": "Sales ($)"},
     title="Sales by Region",
 )
+fig_region.update_layout(yaxis=dict(autorange="reversed"))
+fig_region.update_traces(hovertemplate="<b>%{y}</b><br>Sales: $%{x:,.2f}<extra></extra>")
 col4.plotly_chart(fig_region, use_container_width=True)
