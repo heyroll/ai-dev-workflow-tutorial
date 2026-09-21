@@ -13,5 +13,5 @@ except (FileNotFoundError, ValueError) as e:
 st.title("ShopSmart Sales Dashboard")
 
 col1, col2 = st.columns(2)
-col1.metric("Total Sales", f"${total_sales(df):,.0f}")
+col1.metric("Total Sales", f"${total_sales(df):,.2f}")
 col2.metric("Total Orders", f"{total_orders(df):,}")
