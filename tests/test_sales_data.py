@@ -1,7 +1,14 @@
 import pandas as pd
 import pytest
 
-from sales_data import load_sales_data, total_sales, total_orders, monthly_sales_trend
+from sales_data import (
+    load_sales_data,
+    total_sales,
+    total_orders,
+    monthly_sales_trend,
+    sales_by_category,
+    sales_by_region,
+)
 
 CSV_CONTENT = """date,order_id,product,category,region,quantity,unit_price,total_amount
 2024-01-15,ORD-1,Widget,Electronics,North,1,100.0,100.0
@@ -60,3 +67,17 @@ def test_monthly_sales_trend(sample_df):
 
     assert list(result["month"]) == ["2024-01", "2024-02", "2024-03"]
     assert list(result["total_amount"]) == [200.0, 290.0, 50.0]
+
+
+def test_sales_by_category(sample_df):
+    result = sales_by_category(sample_df)
+
+    assert list(result["category"]) == ["Electronics", "Audio", "Wearables"]
+    assert list(result["total_amount"]) == [300.0, 150.0, 90.0]
+
+
+def test_sales_by_region(sample_df):
+    result = sales_by_region(sample_df)
+
+    assert list(result["region"]) == ["North", "South", "East", "West"]
+    assert list(result["total_amount"]) == [300.0, 100.0, 90.0, 50.0]
