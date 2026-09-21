@@ -12,14 +12,6 @@ A milestone can only move to Done when:
 
 ## To Do
 
-### TASK-6: Testing and refinement
-Verify the dashboard is correct, performant, and presentable.
-- [ ] Dashboard runs with no errors or warnings, and loads within 5 seconds
-- [ ] Displayed values match expected results (~$116,500 total sales, 482 total orders, Electronics as top category)
-- [ ] Layout and styling are polished enough for an executive presentation
-
-Commit:
-
 ### TASK-7: Deployment to Streamlit Community Cloud
 Publish the dashboard so stakeholders can access it via a public URL.
 - [ ] App is deployed to Streamlit Community Cloud
@@ -29,6 +21,14 @@ Publish the dashboard so stakeholders can access it via a public URL.
 Commit:
 
 ## In Progress
+
+### TASK-6: Testing and refinement
+Verify the dashboard is correct, performant, and presentable.
+- [ ] Dashboard runs with no errors or warnings, and loads within 5 seconds
+- [ ] Displayed values match expected results (~$116,500 total sales, 482 total orders, Electronics as top category)
+- [ ] Layout and styling are polished enough for an executive presentation
+
+Commit:
 
 ## Done
 
