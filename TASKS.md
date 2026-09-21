@@ -30,15 +30,16 @@ Commit:
 
 ## In Progress
 
+## Done
+
 ### TASK-5: Category and region breakdowns
 Show sales broken down by product category and by region.
-- [ ] Bar chart shows sales by category, sorted highest to lowest, with all 5 categories present
-- [ ] Bar chart shows sales by region, sorted highest to lowest, with all 4 regions present
-- [ ] Both charts include interactive tooltips with exact values
+- [x] Bar chart shows sales by category, sorted highest to lowest, with all 5 categories present
+- [x] Bar chart shows sales by region, sorted highest to lowest, with all 4 regions present
+- [x] Both charts include interactive tooltips with exact values
 
-Commit:
-
-## Done
+Commit: fea2c5c
+Notes: Clean — implementation matched the plan exactly (TDD RED then GREEN, 7 tests passing), nothing Rolland had to correct.
 
 ### TASK-4: Sales trend chart
 Show how sales change over time.
