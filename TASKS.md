@@ -31,7 +31,7 @@ Verify the dashboard is correct, performant, and presentable.
 - [x] Layout and styling are polished enough for an executive presentation
 
 Commit: N/A — verification only, no code changes required
-Notes: Clean — full test suite (7 tests) passed, app started cleanly in ~1.3s with no errors/warnings in the server log, and all values matched the PRD's expected output ($116,500.21 total sales, 482 orders, Electronics top category, all 4 regions present). Nothing to fix.
+Notes: Clean — verification only, everything already met the acceptance criteria, nothing to fix.
 
 ### TASK-5: Category and region breakdowns
 Show sales broken down by product category and by region.
@@ -58,7 +58,7 @@ Display the headline Total Sales and Total Orders metrics.
 - [x] KPIs are displayed prominently near the top of the dashboard
 
 Commit: 66716aa
-Notes: Implementation matched the plan exactly — TDD RED then GREEN verified (4 tests passing), no rework needed. Verified the KPI values directly against the real dataset (`load_sales_data` + `total_sales`/`total_orders` on `data/sales-data.csv`) rather than reading rendered HTML, since Streamlit renders client-side over a WebSocket and a plain page fetch won't show computed metric values; confirmed $116,500.21 (displays as $116,500) and 482 orders, matching the plan's expected output.
+Notes: Clean — implementation matched the plan exactly (TDD RED then GREEN, 4 tests passing), nothing Rolland had to correct.
 
 ### TASK-2: Data loading and basic structure
 Load and validate the sales data so it's ready for analysis.
