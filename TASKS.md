@@ -22,15 +22,16 @@ Commit:
 
 ## In Progress
 
+## Done
+
 ### TASK-6: Testing and refinement
 Verify the dashboard is correct, performant, and presentable.
-- [ ] Dashboard runs with no errors or warnings, and loads within 5 seconds
-- [ ] Displayed values match expected results (~$116,500 total sales, 482 total orders, Electronics as top category)
-- [ ] Layout and styling are polished enough for an executive presentation
+- [x] Dashboard runs with no errors or warnings, and loads within 5 seconds
+- [x] Displayed values match expected results (~$116,500 total sales, 482 total orders, Electronics as top category)
+- [x] Layout and styling are polished enough for an executive presentation
 
-Commit:
-
-## Done
+Commit: N/A — verification only, no code changes required
+Notes: Clean — full test suite (7 tests) passed, app started cleanly in ~1.3s with no errors/warnings in the server log, and all values matched the PRD's expected output ($116,500.21 total sales, 482 orders, Electronics top category, all 4 regions present). Nothing to fix.
 
 ### TASK-5: Category and region breakdowns
 Show sales broken down by product category and by region.
