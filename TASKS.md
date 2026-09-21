@@ -1,0 +1,73 @@
+# Tasks
+
+This file tracks all work for the ShopSmart e-commerce analytics dashboard, as defined in `prd/ecommerce-analytics.md`.
+
+## Definition of Done
+
+A milestone can only move to Done when:
+
+- Its acceptance criteria are met
+- The app runs locally with `streamlit run app.py`
+- Changes are committed with the milestone ID in the commit message
+
+## To Do
+
+### TASK-1: Environment setup and project initialization
+Set up the project skeleton and dependencies needed to build the dashboard.
+- [ ] `app.py` and `requirements.txt` exist, with `streamlit`, `pandas`, and `plotly` listed as dependencies
+- [ ] Project structure includes a `data/` folder containing `sales-data.csv`
+- [ ] A minimal Streamlit app runs locally with `streamlit run app.py`
+
+Commit:
+
+### TASK-2: Data loading and basic structure
+Load and validate the sales data so it's ready for analysis.
+- [ ] `sales-data.csv` loads into a Pandas DataFrame without errors
+- [ ] Date, numeric, and categorical columns are parsed with correct types
+- [ ] A basic data preview/summary is displayed in the app for sanity checking
+
+Commit:
+
+### TASK-3: KPI cards implementation
+Display the headline Total Sales and Total Orders metrics.
+- [ ] Total Sales (sum of `total_amount`) and Total Orders (transaction count) are calculated correctly
+- [ ] Currency and large numbers are formatted appropriately (e.g., `$116,500`)
+- [ ] KPIs are displayed prominently near the top of the dashboard
+
+Commit:
+
+### TASK-4: Sales trend chart
+Show how sales change over time.
+- [ ] Line chart plots sales over time (daily or monthly granularity)
+- [ ] Chart includes interactive tooltips showing exact values
+- [ ] Chart renders within 2 seconds of data load
+
+Commit:
+
+### TASK-5: Category and region breakdowns
+Show sales broken down by product category and by region.
+- [ ] Bar chart shows sales by category, sorted highest to lowest, with all 5 categories present
+- [ ] Bar chart shows sales by region, sorted highest to lowest, with all 4 regions present
+- [ ] Both charts include interactive tooltips with exact values
+
+Commit:
+
+### TASK-6: Testing and refinement
+Verify the dashboard is correct, performant, and presentable.
+- [ ] Dashboard runs with no errors or warnings, and loads within 5 seconds
+- [ ] Displayed values match expected results (~$116,500 total sales, 482 total orders, Electronics as top category)
+- [ ] Layout and styling are polished enough for an executive presentation
+
+Commit:
+
+### TASK-7: Deployment to Streamlit Community Cloud
+Publish the dashboard so stakeholders can access it via a public URL.
+- [ ] App is deployed to Streamlit Community Cloud
+- [ ] Deployed app is reachable via a shareable public URL and matches local behavior
+- [ ] Public URL is recorded (e.g., in the README) for stakeholder access
+
+Commit:
+
+## In Progress
+
+## Done
