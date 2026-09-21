@@ -65,6 +65,7 @@ Load and validate the sales data so it's ready for analysis.
   Note: Rolland Lopez approved moving TASK-2 to Done without this item. The implementation plan's Task 2 never adds a preview to `app.py`, and Task 3 overwrites `app.py`'s contents wholesale (adding the KPI cards) before a preview would ever be seen, so it was dropped as redundant.
 
 Commit: f094d5b
+Notes: Implementation matched the plan exactly — TDD RED then GREEN verified, tests passed on first try, no rework needed. One discrepancy surfaced: the board's third acceptance criterion (data preview in app) wasn't covered by the implementation plan at all; flagged to Rolland, who approved dropping it (see struck-through item and note above) rather than adding scope outside the plan. Rolland also asked for a formatting fix (blank line after the struck-through criterion), applied after the initial board update.
 
 ### TASK-1: Environment setup and project initialization
 Set up the project skeleton and dependencies needed to build the dashboard.
