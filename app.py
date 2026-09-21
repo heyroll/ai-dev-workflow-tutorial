@@ -20,6 +20,8 @@ except (FileNotFoundError, ValueError) as e:
 
 st.title("ShopSmart Sales Dashboard")
 
+CHART_COLOR = "#7C3AED"
+
 col1, col2 = st.columns(2)
 col1.metric("Total Sales", f"${total_sales(df):,.2f}")
 col2.metric("Total Orders", f"{total_orders(df):,}")
@@ -29,6 +31,7 @@ fig_trend = px.line(
     trend, x="month", y="total_amount", markers=True,
     labels={"month": "Month", "total_amount": "Sales ($)"},
     title="Sales Trend Over Time",
+    color_discrete_sequence=[CHART_COLOR],
 )
 fig_trend.update_yaxes(rangemode="tozero")
 st.plotly_chart(fig_trend, use_container_width=True)
@@ -40,6 +43,7 @@ fig_category = px.bar(
     category, x="total_amount", y="category", orientation="h",
     labels={"category": "Category", "total_amount": "Sales ($)"},
     title="Sales by Category",
+    color_discrete_sequence=[CHART_COLOR],
 )
 fig_category.update_layout(yaxis=dict(autorange="reversed"))
 fig_category.update_traces(hovertemplate="<b>%{y}</b><br>Sales: $%{x:,.2f}<extra></extra>")
@@ -50,6 +54,7 @@ fig_region = px.bar(
     region, x="total_amount", y="region", orientation="h",
     labels={"region": "Region", "total_amount": "Sales ($)"},
     title="Sales by Region",
+    color_discrete_sequence=[CHART_COLOR],
 )
 fig_region.update_layout(yaxis=dict(autorange="reversed"))
 fig_region.update_traces(hovertemplate="<b>%{y}</b><br>Sales: $%{x:,.2f}<extra></extra>")
