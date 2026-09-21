@@ -62,12 +62,13 @@ Commit:
 
 ## In Progress
 
+## Done
+
 ### TASK-1: Environment setup and project initialization
 Set up the project skeleton and dependencies needed to build the dashboard.
-- [ ] `app.py` and `requirements.txt` exist, with `streamlit`, `pandas`, and `plotly` listed as dependencies
-- [ ] Project structure includes a `data/` folder containing `sales-data.csv`
-- [ ] A minimal Streamlit app runs locally with `streamlit run app.py`
+- [x] `app.py` and `requirements.txt` exist, with `streamlit`, `pandas`, and `plotly` listed as dependencies
+- [x] Project structure includes a `data/` folder containing `sales-data.csv`
+- [x] A minimal Streamlit app runs locally with `streamlit run app.py`
 
-Commit:
-
-## Done
+Commit: 9e2afbd
+Notes: First background run of `streamlit run app.py` failed (exit 127) because Streamlit's interactive first-run onboarding prompt blocks on stdin with no input attached; fixed by adding `--server.headless true`. `requirements.txt` is unpinned, so `pip install` resolved pandas to 3.0.6 (a very recent major version) — flagging to watch for API differences once later tasks use it for real data work.
